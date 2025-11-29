@@ -1,0 +1,296 @@
+/* Modern Header & Footer Styling */
+
+header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo-section a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.company-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-family: "Georgia", serif;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background: transparent;
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+nav a.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav a.active::after {
+  width: 80%;
+}
+
+nav a.returns-link {
+  background: #e74c3c;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+nav a.returns-link:hover {
+  background: #c0392b;
+}
+
+nav a.returns-link::after {
+  display: none;
+}
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  color: #ecf0f1;
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  clear: both;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 2rem;
+  line-height: 2;
+  font-size: 1.1rem;
+  color: #bdc3c7;
+}
+
+address strong {
+  color: #4a90e2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.copyright {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.copyright p {
+  margin-bottom: 0.5rem;
+  color: #95a5a6;
+}
+
+.copyright a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.copyright a:hover {
+  color: #5da3f5;
+  border-bottom: 2px solid #5da3f5;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .header-content {
+    gap: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  nav a {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile and Small Tablet Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    position: relative;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .company-name {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    padding: 1rem;
+    font-size: 0.95rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  address {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  address strong {
+    font-size: 1.3rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  header {
+    padding: 0.75rem;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    padding: 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  address {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  address strong {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra Small Mobile Styles */
+@media (max-width: 320px) {
+  .company-name {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  nav a {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexander Castro" />
+    <meta
+      name="description"
+      content="Browse all Swedish Furniture products. Scandinavian-inspired furniture with search and filter options." />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/products-page.css" />
+    <!-- Highslide JS for image zoom -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highslide/4.1.13/highslide.min.css" />
+    <title>All Products - Swedish Furniture</title>
+    <!-- Load Highslide JS at end of head -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highslide/4.1.13/highslide-with-gallery.min.js"></script>
+    <script src="js/highslide.js"></script>
+  </head>
+  <body>
+    <!-- Snipcart  -->
+    <script src="js/snipcart.js"></script>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <div class="logo-section">
+            <a href="index.html">
+              <img
+                src="images/logo.png"
+                alt="Swedish Furniture Logo"
+                class="logo" />
+            </a>
+            <h1 class="company-name">SWEDISH FURNITURE</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="products.html?category=living">Living</a></li>
+              <li><a href="products.html?category=dining">Dining</a></li>
+              <li><a href="products.html?category=bedroom">Bedroom</a></li>
+              <li><a href="products.html?category=office">Workspace</a></li>
+              <li><a href="products.html?category=outdoor">Outdoor</a></li>
+              <li><a href="returns.html" class="returns-link">Returns</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <article>
+        <!-- Search and Filter Section -->
+        <div class="filter-section">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search products..."
+              aria-label="Search products" />
+            <button id="searchBtn" aria-label="Search">🔍</button>
+          </div>
+
+          <div class="filter-controls">
+            <div class="filter-group">
+              <label for="categoryFilter">Category:</label>
+              <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="living">Living Room</option>
+                <option value="dining">Dining Room</option>
+                <option value="bedroom">Bedroom</option>
+                <option value="office">Workspace</option>
+                <option value="outdoor">Outdoor</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="priceFilter">Price Range:</label>
+              <select id="priceFilter">
+                <option value="all">All Prices</option>
+                <option value="0-500">Under $500</option>
+                <option value="500-1000">$500 - $1,000</option>
+                <option value="1000-2000">$1,000 - $2,000</option>
+                <option value="2000-5000">$2,000+</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="sortFilter">Sort By:</label>
+              <select id="sortFilter">
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+              </select>
+            </div>
+
+            <button id="resetBtn" class="reset-btn">Reset Filters</button>
+          </div>
+
+          <div class="results-info">
+            <p id="resultsCount">Showing <span id="count">25</span> products</p>
+          </div>
+        </div>
+
+        <h2 class="warning">
+          ⚠️ Demo Store for Learning Purposes Only — Do Not Buy Any Products
+          From This Site ⚠️
+        </h2>
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Living Room Products -->
+          <section
+            class="product-section"
+            data-category="living"
+            data-price="2299.99"
+            data-name="Cloud Comfort L-Shaped Sectional">
+            <div class="product-image-container">
+              <a href="images/sectional-sofa-lshaped.jpg" class="highslide">
+                <img
+                  src="images/sectional-sofa-lshaped.jpg"
+                  alt="Luxury L-Shaped Sectional Sofa" />
+              </a>
+            </div>
+            <span class="category-badge">Living Room</span>
+            <h2 class="product-title">Cloud Comfort L-Shaped Sectional</h2>
+            <p class="product-price">$2,299.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0001"
+              data-item-price="2299.99"
+              data-item-url="/products.html"
+              data-item-name="Cloud Comfort L-Shaped Sectional">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Premium Top-Grain Leather Upholstery</li>
+                <li>Modular Design with Reversible Chaise</li>
+                <li>High-Density Foam Cushions with Memory Foam Topper</li>
+                <li>Seats 6-7 People Comfortably</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="living"
+            data-price="1899.99"
+            data-name="La-Z-Boy Power Reclining Loveseat">
+            <div class="product-image-container">
+              <a href="images/reclining-loveseat.jpg" class="highslide">
+                <img
+                  src="images/reclining-loveseat.jpg"
+                  alt="Power Reclining Loveseat" />
+              </a>
+            </div>
+            <span class="category-badge">Living Room</span>
+            <h2 class="product-title">La-Z-Boy Power Reclining Loveseat</h2>
+            <p class="product-price">$1,899.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0002"
+              data-item-price="1899.99"
+              data-item-url="/products.html"
+              data-item-name="La-Z-Boy Power Reclining Loveseat">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Dual Power Recline with USB Charging Ports</li>
+                <li>Premium Bonded Leather in Espresso Finish</li>
+                <li>Built-in Cup Holders and Storage Console</li>
+                <li>Lumbar Support with Adjustable Headrests</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="living"
+            data-price="599.99"
+            data-name="Modern Lift-Top Coffee Table">
+            <div class="product-image-container">
+              <a href="images/lift-top-coffee-table.jpg" class="highslide">
+                <img
+                  src="images/lift-top-coffee-table.jpg"
+                  alt="Modern Lift-Top Coffee Table" />
+              </a>
+            </div>
+            <span class="category-badge">Living Room</span>
+            <h2 class="product-title">Modern Lift-Top Coffee Table</h2>
+            <p class="product-price">$599.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0003"
+              data-item-price="599.99"
+              data-item-url="/products.html"
+              data-item-name="Modern Lift-Top Coffee Table">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Hydraulic Lift Mechanism for Easy Height Adjustment</li>
+                <li>Hidden Storage Compartment Underneath</li>
+                <li>Solid Wood Construction with Walnut Finish</li>
+                <li>48" x 24" Surface Area</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="living"
+            data-price="799.99"
+            data-name="Luxury Velvet Accent Chair">
+            <div class="product-image-container">
+              <a href="images/velvet-accent-chair.jpg" class="highslide">
+                <img
+                  src="images/velvet-accent-chair.jpg"
+                  alt="Velvet Accent Chair" />
+              </a>
+            </div>
+            <span class="category-badge">Living Room</span>
+            <h2 class="product-title">Luxury Velvet Accent Chair</h2>
+            <p class="product-price">$799.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0004"
+              data-item-price="799.99"
+              data-item-url="/products.html"
+              data-item-name="Luxury Velvet Accent Chair">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Plush Velvet Upholstery in Emerald Green</li>
+                <li>Gold-Finished Metal Legs for Modern Elegance</li>
+                <li>Deep Button Tufting on Back Cushion</li>
+                <li>Generous Seating with High Back Support</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="living"
+            data-price="1299.99"
+            data-name="Contemporary TV Stand & Entertainment Center">
+            <div class="product-image-container">
+              <a href="images/tv-entertainment-center.jpg" class="highslide">
+                <img
+                  src="images/tv-entertainment-center.jpg"
+                  alt="Modern Entertainment Center" />
+              </a>
+            </div>
+            <span class="category-badge">Living Room</span>
+            <h2 class="product-title">
+              Contemporary TV Stand & Entertainment Center
+            </h2>
+            <p class="product-price">$1,299.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0005"
+              data-item-price="1299.99"
+              data-item-url="/products.html"
+              data-item-name="Contemporary TV Stand & Entertainment Center">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Accommodates TVs up to 85 Inches</li>
+                <li>Built-in LED Lighting with Remote Control</li>
+                <li>Multiple Open and Closed Storage Compartments</li>
+                <li>Cable Management System with Cord Outlets</li>
+              </ul>
+            </details>
+          </section>
+
+          <!-- Office Products -->
+          <section
+            class="product-section"
+            data-category="office"
+            data-price="1799.99"
+            data-name="Executive L-Shaped Desk">
+            <div class="product-image-container">
+              <a href="images/desk-executive-lshaped.jpg" class="highslide">
+                <img
+                  src="images/desk-executive-lshaped.jpg"
+                  alt="Executive L-Shaped Desk with Storage" />
+              </a>
+            </div>
+            <span class="category-badge">Workspace</span>
+            <h2 class="product-title">Executive L-Shaped Desk</h2>
+            <p class="product-price">$1,799.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0006"
+              data-item-price="1799.99"
+              data-item-url="/products.html"
+              data-item-name="Executive L-Shaped Desk">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Premium Solid Wood with Rich Mahogany Finish</li>
+                <li>L-Shaped Design (72" x 72") for Maximum Workspace</li>
+                <li>Built-in File Drawers and Cable Management</li>
+                <li>Keyboard Tray and Locking Storage Cabinet</li>
+                <li>Includes Matching Hutch with Display Shelving</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="office"
+            data-price="1499.99"
+            data-name="Herman Miller Aeron Ergonomic Chair">
+            <div class="product-image-container">
+              <a href="images/office-chair-ergonomic.jpg" class="highslide">
+                <img
+                  src="images/office-chair-ergonomic.jpg"
+                  alt="Premium Ergonomic Executive Chair" />
+              </a>
+            </div>
+            <span class="category-badge">Workspace</span>
+            <h2 class="product-title">Herman Miller Aeron Ergonomic Chair</h2>
+            <p class="product-price">$1,499.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0007"
+              data-item-price="1499.99"
+              data-item-url="/products.html"
+              data-item-name="Herman Miller Aeron Ergonomic Chair">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Award-Winning Ergonomic Design with PostureFit Support</li>
+                <li>Breathable Mesh Material for All-Day Comfort</li>
+                <li>Fully Adjustable Arms, Seat Height, and Recline</li>
+                <li>Weight-Activated Tilt Mechanism</li>
+                <li>12-Year Manufacturer Warranty</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="office"
+            data-price="699.99"
+            data-name="6-Shelf Library Bookcase">
+            <div class="product-image-container">
+              <a href="images/bookcase-6shelf.jpg" class="highslide">
+                <img
+                  src="images/bookcase-6shelf.jpg"
+                  alt="Tall Library Bookcase" />
+              </a>
+            </div>
+            <span class="category-badge">Workspace</span>
+            <h2 class="product-title">6-Shelf Library Bookcase</h2>
+            <p class="product-price">$699.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0008"
+              data-item-price="699.99"
+              data-item-url="/products.html"
+              data-item-name="6-Shelf Library Bookcase">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Solid Wood Construction in Espresso Finish</li>
+                <li>Six Adjustable Shelves for Flexible Storage</li>
+                <li>72" H x 36" W x 14" D</li>
+                <li>Reinforced Back Panel for Stability</li>
+                <li>Perfect for Home Office or Study</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="office"
+            data-price="599.99"
+            data-name="3-Drawer Lateral Filing Cabinet">
+            <div class="product-image-container">
+              <a href="images/filing-cabinet-lateral.jpg" class="highslide">
+                <img
+                  src="images/filing-cabinet-lateral.jpg"
+                  alt="Lateral Filing Cabinet" />
+              </a>
+            </div>
+            <span class="category-badge">Workspace</span>
+            <h2 class="product-title">3-Drawer Lateral Filing Cabinet</h2>
+            <p class="product-price">$599.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0009"
+              data-item-price="599.99"
+              data-item-url="/products.html"
+              data-item-name="3-Drawer Lateral Filing Cabinet">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Steel Construction with Powder-Coated Finish</li>
+                <li>Accommodates Letter and Legal Size Files</li>
+                <li>Full-Extension Ball-Bearing Drawer Glides</li>
+                <li>Locking System for Security</li>
+                <li>42" W x 19" D x 40" H</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="office"
+            data-price="899.99"
+            data-name="Electric Height-Adjustable Standing Desk">
+            <div class="product-image-container">
+              <a href="images/standing-desk-adjustable.jpg" class="highslide">
+                <img
+                  src="images/standing-desk-adjustable.jpg"
+                  alt="Electric Height-Adjustable Standing Desk" />
+              </a>
+            </div>
+            <span class="category-badge">Workspace</span>
+            <h2 class="product-title">
+              Electric Height-Adjustable Standing Desk
+            </h2>
+            <p class="product-price">$899.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0010"
+              data-item-price="899.99"
+              data-item-url="/products.html"
+              data-item-name="Electric Height-Adjustable Standing Desk">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>60" x 30" Spacious Work Surface</li>
+                <li>Electric Motor with Programmable Height Presets</li>
+                <li>Height Range: 28" - 48" (Seated to Standing)</li>
+                <li>Built-in Cable Management Tray</li>
+                <li>Sturdy Steel Frame with 300 lb Weight Capacity</li>
+              </ul>
+            </details>
+          </section>
+
+          <!-- Dining Room Products -->
+          <section
+            class="product-section"
+            data-category="dining"
+            data-price="2799.99"
+            data-name="Rustic Oak 7-Piece Dining Set">
+            <div class="product-image-container">
+              <a href="images/dining-set-7piece-oak.jpg" class="highslide">
+                <img
+                  src="images/dining-set-7piece-oak.jpg"
+                  alt="7-Piece Solid Wood Dining Set" />
+              </a>
+            </div>
+            <span class="category-badge">Dining Room</span>
+            <h2 class="product-title">Rustic Oak 7-Piece Dining Set</h2>
+            <p class="product-price">$2,799.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0011"
+              data-item-price="2799.99"
+              data-item-url="/products.html"
+              data-item-name="Rustic Oak 7-Piece Dining Set">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Solid Oak Construction with Natural Grain Finish</li>
+                <li>72" x 42" Extendable Table (Extends to 96")</li>
+                <li>6 Upholstered Dining Chairs with Padded Seats</li>
+                <li>Seats 6-8 People Comfortably</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="dining"
+            data-price="1199.99"
+            data-name="Contemporary Buffet Sideboard">
+            <div class="product-image-container">
+              <a href="images/buffet-sideboard.jpg" class="highslide">
+                <img
+                  src="images/buffet-sideboard.jpg"
+                  alt="Modern Buffet Sideboard with Storage" />
+              </a>
+            </div>
+            <span class="category-badge">Dining Room</span>
+            <h2 class="product-title">Contemporary Buffet Sideboard</h2>
+            <p class="product-price">$1,199.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0012"
+              data-item-price="1199.99"
+              data-item-url="/products.html"
+              data-item-name="Contemporary Buffet Sideboard">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>72" Wide with Ample Storage Space</li>
+                <li>Three Cabinet Doors with Adjustable Shelving</li>
+                <li>Soft-Close Drawers for Flatware and Linens</li>
+                <li>Rich Espresso Finish with Brushed Nickel Hardware</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="dining"
+            data-price="449.99"
+            data-name="Art Deco Gold Bar Cart">
+            <div class="product-image-container">
+              <a href="images/bar-cart-gold.jpg" class="highslide">
+                <img
+                  src="images/bar-cart-gold.jpg"
+                  alt="Gold Bar Cart with Wheels" />
+              </a>
+            </div>
+            <span class="category-badge">Dining Room</span>
+            <h2 class="product-title">Art Deco Gold Bar Cart</h2>
+            <p class="product-price">$449.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0013"
+              data-item-price="449.99"
+              data-item-url="/products.html"
+              data-item-name="Art Deco Gold Bar Cart">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Two-Tier Design with Tempered Glass Shelves</li>
+                <li>Gold-Plated Metal Frame with Mirror Accents</li>
+                <li>Smooth-Rolling Casters for Easy Movement</li>
+                <li>Perfect for Entertaining and Home Bars</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="dining"
+            data-price="1599.99"
+            data-name="Classic Cherry China Cabinet">
+            <div class="product-image-container">
+              <a href="images/china-cabinet-cherry.jpg" class="highslide">
+                <img
+                  src="images/china-cabinet-cherry.jpg"
+                  alt="Traditional China Cabinet with Display" />
+              </a>
+            </div>
+            <span class="category-badge">Dining Room</span>
+            <h2 class="product-title">Classic Cherry China Cabinet</h2>
+            <p class="product-price">$1,599.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0014"
+              data-item-price="1599.99"
+              data-item-url="/products.html"
+              data-item-name="Classic Cherry China Cabinet">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Rich Cherry Wood Finish with Crown Molding</li>
+                <li>Tempered Glass Doors with Interior LED Lighting</li>
+                <li>Five Adjustable Glass Shelves for Display</li>
+                <li>Lower Cabinet Storage with Silverware Drawer</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="dining"
+            data-price="499.99"
+            data-name="Farmhouse Style Upholstered Bench">
+            <div class="product-image-container">
+              <a href="images/dining-bench-upholstered.jpg" class="highslide">
+                <img
+                  src="images/dining-bench-upholstered.jpg"
+                  alt="Upholstered Dining Bench" />
+              </a>
+            </div>
+            <span class="category-badge">Dining Room</span>
+            <h2 class="product-title">Farmhouse Style Upholstered Bench</h2>
+            <p class="product-price">$499.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0015"
+              data-item-price="499.99"
+              data-item-url="/products.html"
+              data-item-name="Farmhouse Style Upholstered Bench">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>60" Length - Seats 3 Adults Comfortably</li>
+                <li>Linen Upholstery with Button Tufting</li>
+                <li>Solid Wood Frame in Weathered Gray Finish</li>
+                <li>Perfect Pairing with Dining Tables or Entryways</li>
+              </ul>
+            </details>
+          </section>
+
+          <!-- Outdoor Products -->
+          <section
+            class="product-section"
+            data-category="outdoor"
+            data-price="2199.99"
+            data-name="Wicker 7-Piece Outdoor Dining Set">
+            <div class="product-image-container">
+              <a href="images/outdoor-dining-set-wicker.jpg" class="highslide">
+                <img
+                  src="images/outdoor-dining-set-wicker.jpg"
+                  alt="7-Piece Outdoor Dining Set" />
+              </a>
+            </div>
+            <span class="category-badge">Outdoor</span>
+            <h2 class="product-title">Wicker 7-Piece Outdoor Dining Set</h2>
+            <p class="product-price">$2,199.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0020"
+              data-item-price="2199.99"
+              data-item-url="/products.html"
+              data-item-name="Wicker 7-Piece Outdoor Dining Set">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Weather-Resistant Resin Wicker Construction</li>
+                <li>72" Rectangular Glass-Top Dining Table</li>
+                <li>Six Stackable Dining Chairs with Cushions</li>
+                <li>UV-Protected Fade-Resistant Cushion Fabric</li>
+                <li>Easy-to-Clean and Maintain</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="outdoor"
+            data-price="3299.99"
+            data-name="6-Piece Modular Outdoor Sectional">
+            <div class="product-image-container">
+              <a href="images/outdoor-sectional-modular.jpg" class="highslide">
+                <img
+                  src="images/outdoor-sectional-modular.jpg"
+                  alt="Modular Outdoor Sectional Sofa" />
+              </a>
+            </div>
+            <span class="category-badge">Outdoor</span>
+            <h2 class="product-title">6-Piece Modular Outdoor Sectional</h2>
+            <p class="product-price">$3,299.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0021"
+              data-item-price="3299.99"
+              data-item-url="/products.html"
+              data-item-name="6-Piece Modular Outdoor Sectional">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>All-Weather Wicker with Aluminum Frame</li>
+                <li>Modular Design - Rearrange to Fit Your Space</li>
+                <li>Water-Resistant Cushions with Zippered Covers</li>
+                <li>Includes Corner Pieces and Ottoman/Coffee Table</li>
+                <li>Seats 6-8 People Comfortably</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="outdoor"
+            data-price="899.99"
+            data-name="Adjustable Chaise Lounge Set">
+            <div class="product-image-container">
+              <a href="images/chaise-lounge-outdoor.jpg" class="highslide">
+                <img
+                  src="images/chaise-lounge-outdoor.jpg"
+                  alt="Outdoor Lounge Chairs" />
+              </a>
+            </div>
+            <span class="category-badge">Outdoor</span>
+            <h2 class="product-title">
+              Adjustable Chaise Lounge Set (Set of 2)
+            </h2>
+            <p class="product-price">$899.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0022"
+              data-item-price="899.99"
+              data-item-url="/products.html"
+              data-item-name="Adjustable Chaise Lounge Set">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Set of Two Matching Chaise Lounges</li>
+                <li>Five Adjustable Reclining Positions</li>
+                <li>Rustproof Aluminum Frame with Textilene Mesh</li>
+                <li>Foldable Design for Easy Storage</li>
+                <li>Weather and UV Resistant</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="outdoor"
+            data-price="1499.99"
+            data-name="Rectangular Propane Fire Pit Table">
+            <div class="product-image-container">
+              <a href="images/fire-pit-table.jpg" class="highslide">
+                <img
+                  src="images/fire-pit-table.jpg"
+                  alt="Propane Fire Pit Table" />
+              </a>
+            </div>
+            <span class="category-badge">Outdoor</span>
+            <h2 class="product-title">Rectangular Propane Fire Pit Table</h2>
+            <p class="product-price">$1,499.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0023"
+              data-item-price="1499.99"
+              data-item-url="/products.html"
+              data-item-name="Rectangular Propane Fire Pit Table">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>52" x 32" Table with Built-in Fire Feature</li>
+                <li>50,000 BTU Stainless Steel Burner</li>
+                <li>Decorative Lava Rocks and Fire Glass Included</li>
+                <li>Propane Tank Storage Compartment (Tank Not Included)</li>
+                <li>Weather-Resistant Stone-Look Mantel</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="outdoor"
+            data-price="799.99"
+            data-name="11-Foot Cantilever Patio Umbrella">
+            <div class="product-image-container">
+              <a href="images/patio-umbrella-cantilever.jpg" class="highslide">
+                <img
+                  src="images/patio-umbrella-cantilever.jpg"
+                  alt="Large Cantilever Patio Umbrella" />
+              </a>
+            </div>
+            <span class="category-badge">Outdoor</span>
+            <h2 class="product-title">11-Foot Cantilever Patio Umbrella</h2>
+            <p class="product-price">$799.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0024"
+              data-item-price="799.99"
+              data-item-url="/products.html"
+              data-item-name="11-Foot Cantilever Patio Umbrella">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>11-Foot Diameter Shade Coverage</li>
+                <li>360-Degree Rotation with Crank Tilt System</li>
+                <li>UV-Resistant Fade-Proof Canopy Fabric</li>
+                <li>Aluminum Frame with Powder-Coated Finish</li>
+                <li>Weighted Base Included for Stability</li>
+              </ul>
+            </details>
+          </section>
+
+          <!-- Bedroom Products -->
+          <section
+            class="product-section"
+            data-category="bedroom"
+            data-price="1899.99"
+            data-name="Luxury King Upholstered Platform Bed">
+            <div class="product-image-container">
+              <a href="images/bed-king-upholstered.jpg" class="highslide">
+                <img
+                  src="images/bed-king-upholstered.jpg"
+                  alt="King Size Upholstered Platform Bed" />
+              </a>
+            </div>
+            <span class="category-badge">Bedroom</span>
+            <h2 class="product-title">Luxury King Upholstered Platform Bed</h2>
+            <p class="product-price">$1,899.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0025"
+              data-item-price="1899.99"
+              data-item-url="/products.html"
+              data-item-name="Luxury King Upholstered Platform Bed">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Premium Linen Fabric with Tufted Headboard</li>
+                <li>King Size - 76" W x 80" L</li>
+                <li>Solid Wood Frame with Center Support Beam</li>
+                <li>No Box Spring Required - Platform Design</li>
+                <li>Available in Gray, Beige, or Navy</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="bedroom"
+            data-price="1299.99"
+            data-name="Contemporary 6-Drawer Dresser">
+            <div class="product-image-container">
+              <a href="images/dresser-6drawer.jpg" class="highslide">
+                <img
+                  src="images/dresser-6drawer.jpg"
+                  alt="Modern 6-Drawer Dresser" />
+              </a>
+            </div>
+            <span class="category-badge">Bedroom</span>
+            <h2 class="product-title">Contemporary 6-Drawer Dresser</h2>
+            <p class="product-price">$1,299.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0026"
+              data-item-price="1299.99"
+              data-item-url="/products.html"
+              data-item-name="Contemporary 6-Drawer Dresser">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Solid Wood Construction with Walnut Veneer</li>
+                <li>Six Spacious Drawers with Soft-Close Glides</li>
+                <li>58" W x 36" H x 18" D Dimensions</li>
+                <li>Brushed Gold Metal Handles</li>
+                <li>Anti-Tip Hardware Included for Safety</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="bedroom"
+            data-price="599.99"
+            data-name="Modern Nightstand Set">
+            <div class="product-image-container">
+              <a href="images/nightstand-set.jpg" class="highslide">
+                <img
+                  src="images/nightstand-set.jpg"
+                  alt="Set of 2 Modern Nightstands" />
+              </a>
+            </div>
+            <span class="category-badge">Bedroom</span>
+            <h2 class="product-title">Modern Nightstand Set (Set of 2)</h2>
+            <p class="product-price">$599.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0027"
+              data-item-price="599.99"
+              data-item-url="/products.html"
+              data-item-name="Modern Nightstand Set">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Set of Two Matching Nightstands</li>
+                <li>Two Drawers Each with Soft-Close Mechanism</li>
+                <li>Built-in USB Charging Ports and Power Outlet</li>
+                <li>Open Shelf for Books and Decor</li>
+                <li>24" H x 18" W x 16" D Each</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="bedroom"
+            data-price="1699.99"
+            data-name="Classic Wardrobe Armoire">
+            <div class="product-image-container">
+              <a href="images/wardrobe-armoire.jpg" class="highslide">
+                <img
+                  src="images/wardrobe-armoire.jpg"
+                  alt="Large Wardrobe Armoire with Mirror" />
+              </a>
+            </div>
+            <span class="category-badge">Bedroom</span>
+            <h2 class="product-title">Classic Wardrobe Armoire</h2>
+            <p class="product-price">$1,699.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0028"
+              data-item-price="1699.99"
+              data-item-url="/products.html"
+              data-item-name="Classic Wardrobe Armoire">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Full-Length Mirror on Door with Beveled Edges</li>
+                <li>Double Hanging Rods for Maximum Storage</li>
+                <li>Three Lower Drawers for Folded Items</li>
+                <li>Adjustable Interior Shelving</li>
+                <li>72" H x 48" W x 24" D</li>
+              </ul>
+            </details>
+          </section>
+
+          <section
+            class="product-section"
+            data-category="bedroom"
+            data-price="899.99"
+            data-name="Hollywood Vanity with LED Mirror">
+            <div class="product-image-container">
+              <a href="images/vanity-led-mirror.jpg" class="highslide">
+                <img
+                  src="images/vanity-led-mirror.jpg"
+                  alt="Makeup Vanity with Lighted Mirror" />
+              </a>
+            </div>
+            <span class="category-badge">Bedroom</span>
+            <h2 class="product-title">Hollywood Vanity with LED Mirror</h2>
+            <p class="product-price">$899.99</p>
+            <button
+              class="add-to-cart snipcart-add-item"
+              data-item-id="0029"
+              data-item-price="899.99"
+              data-item-url="/products.html"
+              data-item-name="Hollywood Vanity with LED Mirror">
+              Add to Cart
+            </button>
+            <details>
+              <summary>Product Details</summary>
+              <ul>
+                <li>Large LED-Lit Mirror with Adjustable Brightness</li>
+                <li>Five Spacious Drawers for Cosmetics and Accessories</li>
+                <li>Matching Upholstered Stool Included</li>
+                <li>White Glossy Finish with Crystal Knobs</li>
+                <li>Built-in Power Outlets for Hair Tools</li>
+              </ul>
+            </details>
+          </section>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results" style="display: none">
+          <p>No products found matching your criteria.</p>
+          <button onclick="resetFilters()" class="reset-btn">
+            Reset All Filters
+          </button>
+        </div>
+      </article>
+
+      <footer>
+        <address>
+          <strong>SWEDISH FURNITURE</strong><br />
+          1817 Northern Avenue<br />
+          Phoenix, AZ 85021<br />
+          Phone: (602) 555-NORD (6673)
+        </address>
+
+        <div class="copyright">
+          <p>&copy; 2025 Swedish Furniture Co. All rights reserved.</p>
+          <p>
+            Questions? Contact us:
+            <a href="mailto:Ale2157844@maricopa.edu">Ale2157844@maricopa.edu</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Products Page JavaScript -->
+    <script src="js/products.js"></script>
+  </body>
+</html>

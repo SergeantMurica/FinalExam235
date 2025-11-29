@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexander Castro" />
+    <meta
+      name="description"
+      content="Swedish Furniture - Scandinavian-inspired furniture with minimalist design and sustainable materials for modern living." />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/home-page.css" />
+    <title>Swedish Furniture - Modern Scandinavian Furniture</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <div class="logo-section">
+            <img
+              src="images/logo.png"
+              alt="Swedish Furniture Logo"
+              class="logo" />
+            <h1 class="company-name">SWEDISH FURNITURE</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="products.html?category=living">Living</a></li>
+              <li><a href="products.html?category=dining">Dining</a></li>
+              <li><a href="products.html?category=bedroom">Bedroom</a></li>
+              <li><a href="products.html?category=office">Workspace</a></li>
+              <li><a href="products.html?category=outdoor">Outdoor</a></li>
+              <li><a href="returns.html" class="returns-link">Returns</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Simple. Functional. Beautiful.</h1>
+            <p class="hero-subtitle">
+              Scandinavian design philosophy meets modern living. Discover
+              furniture that embodies Nordic principles of simplicity,
+              functionality, and timeless beauty.
+            </p>
+            <div class="hero-cta">
+              <a href="products.html" class="cta-primary">Explore Collection</a>
+              <a href="#about" class="cta-secondary">Learn More</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="./images/hero-scandinavian-living.jpg"
+              alt="Swedish Furniture - Minimalist Living Room"
+              class="hero-img" />
+            <div class="hero-badge">
+              <span class="badge-icon">🌿</span>
+              <span class="badge-text">Sustainable Materials</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section" id="about">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>The Swedish Furniture Way</h2>
+            <p>
+              Welcome to Swedish Furniture, where Scandinavian design philosophy
+              meets modern living. We bring you furniture that embodies the
+              Nordic principles of simplicity, functionality, and beauty. Our
+              Phoenix showroom features clean-lined pieces crafted from
+              sustainable materials like birch, oak, and recycled textiles.
+            </p>
+            <p>
+              At Swedish Furniture, we believe your home should be a sanctuary
+              of calm and order. Our carefully curated selection focuses on
+              quality over quantity, featuring pieces that are both practical
+              and aesthetically pleasing. Whether you're embracing hygge in your
+              living room, creating a serene bedroom retreat, or designing an
+              efficient workspace, our furniture helps you live with intention.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">Happy Customers</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Sustainable</div>
+              </div>
+            </div>
+          </div>
+          <aside class="promo-sidebar">
+            <div class="promo-card">
+              <div class="promo-badge">NEW COLLECTION</div>
+              <img
+                src="./images/hero-scandinavian-living.jpg"
+                alt="New Collection Preview"
+                class="promo-image" />
+              <h3>Winter 2025</h3>
+              <p>Clean lines meet natural materials in our latest collection</p>
+              <a
+                href="products.html?category=living&search=cloud"
+                class="promo-button"
+                >Explore Now</a
+              >
+              <div class="promo-tagline">Less is More</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- Products Grid -->
+      <section class="products-section">
+        <h2 class="section-title">Shop by Room</h2>
+        <p class="section-subtitle">
+          Thoughtfully designed furniture for every space in your home
+        </p>
+
+        <div class="products-grid">
+          <div
+            class="product-card"
+            onclick="location.href='products.html?category=living'">
+            <div class="product-image-wrapper">
+              <img
+                src="images/living-room-collection.jpg"
+                alt="Living Room Furniture"
+                class="product-image" />
+              <div class="product-overlay">
+                <span class="overlay-text">View Collection →</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Living Room</h3>
+              <p>Minimalist Seating & Tables</p>
+              <span class="product-count">24 Items</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="location.href='products.html?category=dining'">
+            <div class="product-image-wrapper">
+              <img
+                src="images/dining-room-collection.jpg"
+                alt="Dining Room Furniture"
+                class="product-image" />
+              <div class="product-overlay">
+                <span class="overlay-text">View Collection →</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Dining Room</h3>
+              <p>Simple Elegance</p>
+              <span class="product-count">18 Items</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="location.href='products.html?category=bedroom'">
+            <div class="product-image-wrapper">
+              <img
+                src="images/bedroom-collection.jpg"
+                alt="Bedroom Furniture"
+                class="product-image" />
+              <div class="product-overlay">
+                <span class="overlay-text">View Collection →</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Bedroom</h3>
+              <p>Peaceful Sleep</p>
+              <span class="product-count">32 Items</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="location.href='products.html?category=office'">
+            <div class="product-image-wrapper">
+              <img
+                src="images/office-collection.jpg"
+                alt="Office Furniture"
+                class="product-image" />
+              <div class="product-overlay">
+                <span class="overlay-text">View Collection →</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Workspace</h3>
+              <p>Focused Design</p>
+              <span class="product-count">16 Items</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="location.href='products.html?category=outdoor'">
+            <div class="product-image-wrapper">
+              <img
+                src="images/outdoor-collection.jpg"
+                alt="Outdoor Furniture"
+                class="product-image" />
+              <div class="product-overlay">
+                <span class="overlay-text">View Collection →</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Outdoor</h3>
+              <p>Natural Comfort</p>
+              <span class="product-count">12 Items</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promotional Banner -->
+      <section class="promo-banner">
+        <div class="banner-content">
+          <div class="banner-icon">❄️</div>
+          <div class="banner-text">
+            <h2>Winter Simplicity Sale</h2>
+            <p>
+              Embrace minimalism this season. Save <strong>20%</strong> on all
+              sustainable wood furniture pieces. Use code
+              <strong>NORDIC20</strong> at checkout.
+            </p>
+          </div>
+          <div class="banner-details">
+            <div class="banner-feature">
+              <span class="feature-check">✓</span>
+              <span>Free carbon-neutral shipping over $500</span>
+            </div>
+            <div class="banner-feature">
+              <span class="feature-check">✓</span>
+              <span>Valid through December 2025</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <address>
+          <strong>SWEDISH FURNITURE</strong><br />
+          1817 Northern Avenue<br />
+          Phoenix, AZ 85021<br />
+          Phone: (602) 555-NORD (6673)
+        </address>
+
+        <div class="copyright">
+          <p>&copy; 2025 Swedish Furniture Co. All rights reserved.</p>
+          <p>
+            Questions? Contact us:
+            <a href="mailto:Ale2157844@maricopa.edu">Ale2157844@maricopa.edu</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

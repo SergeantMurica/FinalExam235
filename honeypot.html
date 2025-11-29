@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexander Castro" />
+    <meta
+      name="description"
+      content="Product returns form for Swedish Furniture customers. Easy returns and exchanges for your furniture purchases." />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <title>Product Returns - Swedish Furniture</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <div class="logo-section">
+            <a href="index.html">
+              <img
+                src="images/logo.png"
+                alt="Swedish Furniture Logo"
+                class="logo" />
+            </a>
+            <h1 class="company-name">SWEDISH FURNITURE</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="living-room-furniture.html">Living</a></li>
+              <li><a href="dining-furniture.html">Dining</a></li>
+              <li><a href="bedroom-furniture.html">Bedroom</a></li>
+              <li><a href="office-furniture.html">Workspace</a></li>
+              <li><a href="outdoor-patio.html">Outdoor</a></li>
+              <li>
+                <a href="returns.html" class="returns-link active">Returns</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <article>
+        <div class="returns-hero">
+          <h1>Hassle-Free Returns</h1>
+          <p class="returns-subtitle">
+            We stand behind our products. Return or exchange within 90 days for
+            a full refund or store credit.
+          </p>
+          <div class="returns-benefits">
+            <div class="benefit-item">
+              <span class="benefit-icon">📦</span>
+              <span>Free Return Shipping</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">⚡</span>
+              <span>Fast Processing</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">💯</span>
+              <span>90-Day Guarantee</span>
+            </div>
+          </div>
+        </div>
+
+        <form
+          action="return.php"
+          method="post"
+          class="returns-form"
+          id="returnsForm"
+          novalidate>
+          <!-- Enhanced honeypot fields - multiple traps for bots -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Website:</label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              tabindex="-1"
+              autocomplete="off" />
+          </div>
+          <div class="hp-field" aria-hidden="true">
+            <label for="company">Company:</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              tabindex="-1"
+              autocomplete="off" />
+          </div>
+          <input type="hidden" name="timestamp" id="timestamp" value="" />
+          <input type="hidden" name="form_token" id="form_token" value="" />
+
+          <fieldset class="form-section">
+            <legend>Contact Information</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="customer-name"
+                  >Full Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="customer-name"
+                  name="customerName"
+                  placeholder="John Doe"
+                  required
+                  minlength="2"
+                  aria-describedby="name-error" />
+                <span class="error-message" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="customer-phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="customer-phone"
+                  name="customerPhone"
+                  placeholder="(555) 123-4567"
+                  pattern="[\(\d{3}\)\s\d{3}-\d{4}|\d{10}]"
+                  aria-describedby="phone-error" />
+                <span class="error-message" id="phone-error"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="customer-email"
+                >Email Address <span class="required">*</span></label
+              >
+              <input
+                type="email"
+                id="customer-email"
+                name="customerEmail"
+                placeholder="john.doe@example.com"
+                required
+                aria-describedby="email-error" />
+              <span class="error-message" id="email-error"></span>
+              <span class="field-hint"
+                >We'll send your return confirmation here</span
+              >
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Order Details</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="order-number"
+                  >Order Number <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="order-number"
+                  name="orderNumber"
+                  placeholder="ORD-123456"
+                  required
+                  pattern="[A-Z]{3}-\d{6}"
+                  aria-describedby="order-error" />
+                <span class="error-message" id="order-error"></span>
+                <span class="field-hint">Format: ORD-123456</span>
+              </div>
+
+              <div class="form-group">
+                <label for="purchase-date"
+                  >Purchase Date <span class="required">*</span></label
+                >
+                <input
+                  type="date"
+                  id="purchase-date"
+                  name="purchaseDate"
+                  required
+                  max=""
+                  aria-describedby="date-error" />
+                <span class="error-message" id="date-error"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Return Information</legend>
+
+            <div class="form-group">
+              <label for="product-details"
+                >Products to Return <span class="required">*</span></label
+              >
+              <textarea
+                id="product-details"
+                name="productDetails"
+                rows="4"
+                required
+                placeholder="Example: Stockholm Sofa (Gray), Item #12345 - Arrived with minor scratch on armrest"
+                aria-describedby="products-error"></textarea>
+              <span class="error-message" id="products-error"></span>
+              <span class="field-hint"
+                >Include item names, SKUs, and reason for return</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="return-reason"
+                >Primary Reason for Return
+                <span class="required">*</span></label
+              >
+              <select
+                id="return-reason"
+                name="returnReason"
+                required
+                aria-describedby="reason-error">
+                <option value="">Select a reason...</option>
+                <option value="defective">Defective or Damaged</option>
+                <option value="wrong-item">Wrong Item Received</option>
+                <option value="not-as-described">Not as Described</option>
+                <option value="quality">Quality Below Expectations</option>
+                <option value="size-fit">Size or Fit Issues</option>
+                <option value="changed-mind">Changed My Mind</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="error-message" id="reason-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Preferred Resolution <span class="required">*</span></label
+              >
+              <div class="radio-card-group">
+                <div class="radio-card">
+                  <input
+                    type="radio"
+                    id="exchange"
+                    name="returnOption"
+                    value="exchange"
+                    checked />
+                  <label for="exchange">
+                    <span class="radio-card-icon">🔄</span>
+                    <span class="radio-card-title">Exchange</span>
+                    <span class="radio-card-desc"
+                      >Swap for a different item</span
+                    >
+                  </label>
+                </div>
+                <div class="radio-card">
+                  <input
+                    type="radio"
+                    id="refund"
+                    name="returnOption"
+                    value="refund" />
+                  <label for="refund">
+                    <span class="radio-card-icon">💳</span>
+                    <span class="radio-card-title">Refund</span>
+                    <span class="radio-card-desc"
+                      >Full refund to original payment</span
+                    >
+                  </label>
+                </div>
+                <div class="radio-card">
+                  <input
+                    type="radio"
+                    id="store-credit"
+                    name="returnOption"
+                    value="store-credit" />
+                  <label for="store-credit">
+                    <span class="radio-card-icon">🎁</span>
+                    <span class="radio-card-title">Store Credit</span>
+                    <span class="radio-card-desc">Get 10% bonus credit</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="additional-comments">Additional Comments</label>
+              <textarea
+                id="additional-comments"
+                name="additionalComments"
+                rows="3"
+                placeholder="Any other details we should know about your return..."></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section preferences-section">
+            <legend>Preferences</legend>
+
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                value="yes" />
+              <label for="newsletter">
+                <span class="checkbox-label-text">
+                  <strong>Get 20% off your next purchase!</strong>
+                  Subscribe to our weekly newsletter for exclusive deals and new
+                  arrivals
+                </span>
+              </label>
+            </div>
+
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                id="feedback"
+                name="feedback"
+                value="yes" />
+              <label for="feedback">
+                <span class="checkbox-label-text">
+                  I'm willing to provide additional feedback to help improve our
+                  products
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">
+              <span>Submit Return Request</span>
+              <span class="btn-icon">→</span>
+            </button>
+            <button type="reset" class="btn-secondary">Clear Form</button>
+          </div>
+
+          <p class="form-footer-note">
+            <strong>What happens next?</strong> You'll receive a confirmation
+            email within 24 hours with your prepaid return label and
+            instructions.
+          </p>
+        </form>
+      </article>
+
+      <footer>
+        <address>
+          <strong>SWEDISH FURNITURE</strong><br />
+          1817 Northern Avenue<br />
+          Phoenix, AZ 85021<br />
+          Phone: (602) 555-NORD (6673)
+        </address>
+
+        <div class="copyright">
+          <p>&copy; 2025 Swedish Furniture Co. All rights reserved.</p>
+          <p>
+            Questions? Contact us:
+            <a href="mailto:Ale2157844@maricopa.edu">Ale2157844@maricopa.edu</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Set max date for purchase date to today
+      document.getElementById("purchase-date").max = new Date()
+        .toISOString()
+        .split("T")[0];
+
+      // Honeypot protection - set timestamp and token
+      document.getElementById("timestamp").value = Date.now();
+      document.getElementById("form_token").value = btoa(
+        Date.now() + "_" + Math.random()
+      );
+
+      // Form validation
+      const form = document.getElementById("returnsForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Check honeypot fields
+        if (
+          document.getElementById("website").value !== "" ||
+          document.getElementById("company").value !== ""
+        ) {
+          console.log("Bot detected");
+          return false;
+        }
+
+        // Check form submission speed (bots submit too fast)
+        const submitTime = Date.now();
+        const formLoadTime = parseInt(
+          document.getElementById("timestamp").value
+        );
+        if (submitTime - formLoadTime < 3000) {
+          console.log("Form submitted too quickly");
+          return false;
+        }
+
+        let isValid = true;
+        const errors = {};
+
+        // Validate name
+        const name = document.getElementById("customer-name");
+        if (name.value.trim().length < 2) {
+          errors.name = "Please enter your full name";
+          isValid = false;
+        }
+
+        // Validate email
+        const email = document.getElementById("customer-email");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value)) {
+          errors.email = "Please enter a valid email address";
+          isValid = false;
+        }
+
+        // Validate order number
+        const orderNum = document.getElementById("order-number");
+        const orderPattern = /^[A-Z]{3}-\d{6}$/;
+        if (!orderPattern.test(orderNum.value)) {
+          errors.order = "Order number must be in format: ORD-123456";
+          isValid = false;
+        }
+
+        // Validate purchase date
+        const purchaseDate = document.getElementById("purchase-date");
+        if (!purchaseDate.value) {
+          errors.date = "Please select your purchase date";
+          isValid = false;
+        } else {
+          const selected = new Date(purchaseDate.value);
+          const today = new Date();
+          const ninetyDaysAgo = new Date(today.setDate(today.getDate() - 90));
+          if (selected < ninetyDaysAgo) {
+            errors.date =
+              "Returns are only accepted within 90 days of purchase";
+            isValid = false;
+          }
+        }
+
+        // Validate product details
+        const products = document.getElementById("product-details");
+        if (products.value.trim().length < 10) {
+          errors.products =
+            "Please provide detailed information about the products";
+          isValid = false;
+        }
+
+        // Validate return reason
+        const reason = document.getElementById("return-reason");
+        if (!reason.value) {
+          errors.reason = "Please select a reason for return";
+          isValid = false;
+        }
+
+        // Display errors
+        document
+          .querySelectorAll(".error-message")
+          .forEach((el) => (el.textContent = ""));
+        document
+          .querySelectorAll(".form-group")
+          .forEach((el) => el.classList.remove("has-error"));
+
+        if (!isValid) {
+          if (errors.name) {
+            document.getElementById("name-error").textContent = errors.name;
+            name.closest(".form-group").classList.add("has-error");
+          }
+          if (errors.email) {
+            document.getElementById("email-error").textContent = errors.email;
+            email.closest(".form-group").classList.add("has-error");
+          }
+          if (errors.order) {
+            document.getElementById("order-error").textContent = errors.order;
+            orderNum.closest(".form-group").classList.add("has-error");
+          }
+          if (errors.date) {
+            document.getElementById("date-error").textContent = errors.date;
+            purchaseDate.closest(".form-group").classList.add("has-error");
+          }
+          if (errors.products) {
+            document.getElementById("products-error").textContent =
+              errors.products;
+            products.closest(".form-group").classList.add("has-error");
+          }
+          if (errors.reason) {
+            document.getElementById("reason-error").textContent = errors.reason;
+            reason.closest(".form-group").classList.add("has-error");
+          }
+
+          // Scroll to first error
+          const firstError = document.querySelector(".has-error");
+          if (firstError) {
+            firstError.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        } else {
+          // Form is valid, submit it
+          form.submit();
+        }
+      });
+
+      // Real-time validation feedback
+      const inputs = form.querySelectorAll("input, textarea, select");
+      inputs.forEach((input) => {
+        input.addEventListener("blur", function () {
+          this.closest(".form-group")?.classList.remove("has-error");
+          const errorEl = this.getAttribute("aria-describedby");
+          if (errorEl) {
+            document.getElementById(errorEl).textContent = "";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
